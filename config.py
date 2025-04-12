@@ -1,52 +1,24 @@
-import os
+import re, os
 
+id_pattern = re.compile(r'^.\d+$') 
 
+API_ID = os.environ.get("API_ID", "23246613")
 
-# Required Variables Config
-API_ID = int(os.environ.get("API_ID", ""))
-API_HASH = os.environ.get("API_HASH", "")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-ADMIN = int(os.environ.get("ADMIN", ""))
+API_HASH = os.environ.get("API_HASH", "b94000048d3e07bd33f1830edb2ef4f0")
 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7741808740:AAGdTXAixCeFP-I0rLB29H3XeUqa28J30jE") 
 
-# Premium 4GB Renaming Client Config
-STRING_SESSION = os.environ.get("STRING_SESSION", "")
+FORCE_SUB = os.environ.get("FORCE_SUB", "KBCRename_bot") 
 
+DB_NAME = os.environ.get("DB_NAME","cluster0")     
 
-# Log & Force Channel Config
-FORCE_SUBS = os.environ.get("FORCE_SUBS", "")
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+DB_URL = os.environ.get("DB_URL","mongodb+srv://kandula:#Bhanu000#@cluster0.rwv5s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+")
+ 
+FLOOD = int(os.environ.get("FLOOD", "10"))
 
+START_PIC = os.environ.get("START_PIC", "https://graph.org/Rename-Bot-01-15")
 
-# Mongo DB Database Config
-DATABASE_URL = os.environ.get("DATABASE_URL", "")
-DATABASE_NAME = os.environ.get("DATABASE_NAME", "madflixbotz")
+ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1286239869').split()]
 
-
-# Other Variables Config
-START_PIC = os.environ.get("START_PIC", "https://graph.org/file/ad48ac09b1e6f30d2dae4.jpg")
-
-
-
-
-
-# If You Need To Add Verify System Then Message Me On Telegram
-# Check Demo Bots
-# https://t.me/FileRenameXBot
-# https://t.me/PremiumRenamerRobot
-# https://t.me/FileRenamerXRobot
-# Token Verification Adding Features Is Paid So If You Want Then Dm Me
-
-
-# SHORTNER_URL = os.environ.get("SHORTNER_URL", "")
-# SHORTNER_API = os.environ.get("SHORTNER_API", "")
-# TOKEN_TIMEOUT = os.environ.get("TOKEN_TIMEOUT", "")
-
-
-
-
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+PORT = os.environ.get("PORT", "8080")
