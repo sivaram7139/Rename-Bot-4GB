@@ -37,7 +37,6 @@ class Config(object):
     START_PIC   = os.environ.get("START_PIC", "")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '8140276564').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "KBCREBOT") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
     MAX_CONCURRENT_TRANSMISSIONS = int(os.environ.get("MAX_CONCURRENT_TRANSMISSIONS", "10")) # Set the maximum amount of concurrent transmissions (uploads & downloads).
     
     # wes response configuration     
